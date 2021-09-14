@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cornerzilla</title>
+
+  <link rel="stylesheet" href="CSS/style.css">
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+  <!-- Google Montserrat  Font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Kit -->
+  <script src="https://kit.fontawesome.com/b362809ce6.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="body">
+  <header>
+    <section class="container rounded header">
+      <h1 class="d-flex justify-content-center  text-white">Cornerzilla</h1>
+      <hr class="text-white fw-bolder">
+      <div class="nav justify-content-center p-3">
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button onclick="loadProducts()" class="btn btn-success" type="submit">Search</button>
+        </form>
+      </div>
+
+      <!-- Scrollable modal -->
+      <div id="modal" class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-body">
+          <p id="details"></p>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <!-- Card Layout -->
+    <section class="container my-3 p-3 rounded">
+      <div class="row">
+        <div class="col-md-9 col-lg-9 col-sm-7 items rounded">
+          <div id="products" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+          </div>
+        </div>
+
+        <!-- Cart Layout -->
+        <div class="col-md-3 col-lg-3 col-sm-5 main">
+          <div class="cart h-auto w-auto p-3 rounded shadow" id="my-cart">
+            <h1 class="fw-bold">Cart List</h1>
+            <table class="table fw-bold">
+              <tbody>
+                <tr>
+                  <td>Products Count:</td>
+                  <td><span id="total-Products">0</span></td>
+                </tr>
+                <tr>
+                  <td>Price:</td>
+                  <td>$<span id="price">0</span></td>
+                </tr>
+                <tr>
+                  <td>Delivery Charge:</td>
+                  <td>$<span id="delivery-charge">0</span></td>
+                </tr>
+                <tr>
+                  <td>Total Tax:</td>
+                  <td>$<span id="total-tax">0</span></td>
+                </tr>
+              <tfoot>
+                <td>Total:</td>
+                <td colspan="3">$<span id="total">0</span></td>
+              </tfoot>
+              </tbody>
+            </table>
+            <div class="parches text-center">
+              <button class="btn text-center fw-bold btn-primary">Buy Now</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <section class="container rounded footer">
+      <p class="fw-bold d-flex justify-content-end align-items-center p-3 text-white">&copy;All Right Reserved</p>
+    </section>
+  </footer>
+
+  <!-- JS File -->
+  <script src="./js/app.js"></script>
+
+  <!-- JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+</body>
+</html>

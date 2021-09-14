@@ -1,0 +1,22 @@
+.body{
+    background-color: #376F70;
+}
+.header{
+    background-color: #C35942;
+}
+img{
+    height: 200px;
+}
+.footer{
+    background-color: #C35942;
+}
+.cart{
+  position: fixed;
+  background-color: #5CDB94;
+}
+.bg-card{
+    background-color: #1558A4;
+}
+.icon{
+    color: orange;
+}
