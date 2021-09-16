@@ -4,9 +4,6 @@
 .header{
     background-color: #C35942;
 }
-img{
-    height: 200px;
-}
 .footer{
     background-color: #C35942;
 }
@@ -15,7 +12,7 @@ img{
   background-color: #5CDB94;
 }
 .bg-card{
-    background-color: #1558A4;
+    background-color: lightsteelblue;
 }
 .icon{
     color: orange;

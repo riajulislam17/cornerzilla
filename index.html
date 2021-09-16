@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cornerzilla</title>
 
+  <link rel="shortcut icon" href="shopping.png" type="image/x-icon">
+
   <link rel="stylesheet" href="CSS/style.css">
 
   <!-- Bootstrap CDN -->
@@ -33,14 +35,29 @@
           <button onclick="loadProducts()" class="btn btn-success" type="submit">Search</button>
         </form>
       </div>
+    </section>
 
-      <!-- Scrollable modal -->
-      <div id="modal" class="modal-dialog modal-dialog-scrollable">
-        <div class="modal-body">
-          <p id="details"></p>
+      <!-- modal start -->
+    <section class="container">
+      <!-- Modal -->
+      <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Product Description</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p id="description" class="text-center"></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+    <!-- modal end -->
   </header>
 
   <main>

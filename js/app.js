@@ -1,4 +1,3 @@
-document.getElementById("modal").style.display = 'none';
 const loadProducts = () => {
   const url = `https://fakestoreapi.com/products`;
   fetch(url)
@@ -15,7 +14,7 @@ const showProducts = (products) => {
     const div = document.createElement("div");
     div.classList.add('col');
     div.innerHTML = `
-      <div class="card h-100 shadow-lg border-dark">
+      <div class="card h-100 shadow-lg border-dark rounded">
           <div class="card-body bg-card">
             <img style="height: 200px;" class="card-img-top img-fluid rounded" src=${image}></img>
             <h4 class="mt-3">${product.title}</h4>
@@ -30,9 +29,11 @@ const showProducts = (products) => {
             <span class="icon fw-bold"><i class="fas fa-user-check"></i> ${product.rating.count}</span>
             </p>
             <div class="d-flex justify-content-around">
-              <button onclick="addToCart(${product.price})" id="addToCart-btn" class="buy-now btn btn-success fw-bold">Add To Cart</button>
+            
+              <button onclick="addToCart(${product.price})" id="addToCart-btn" class=" btn btn-success fw-bold text-dark">Add To Cart</button>
 
-              <button onclick="showDetails(${product.description})" id="showDetails" class="buy-now btn btn-warning fw-bold">Details</button>
+              <button onclick="showDetails('${product.description}')" type="button" class="btn btn-warning fw-bold text-dark" data-bs-toggle="modal" data-bs-target="#detailsModal">Details</button>
+
             </div>
           </span>
       </div>`;
@@ -101,7 +102,6 @@ const addToCart = (price) => {
 
 /*---------- Show Details In Modal ----------*/
 const showDetails = (description) => {
-  console.log('details clicked');
-  document.getElementById('details').innerText = description;
-  document.getElementById('modal').style.display = 'block';
+  document.getElementById('description').innerText = description;
+  console.log(description);
 };
